@@ -9,11 +9,12 @@
     <title>My movie list</title>
 </head>
 <body>
-
+<div id="container">
     <h1>My movie list</h1>
-    <nav class="genreButton">
-        
+    <div>
+    <nav class="genreButton"> 
     </nav>
+    </div>
     <!--this is the movie search bar-->
     <div class = "search-wrapper">
         <label for="search"> Search Movies</label>
@@ -21,11 +22,15 @@
     </div>
     <!--these are the cards the movie will filter through-->
     <div class = "movieCards">
-        <div class = "body"> </div>
+        <ul id = "movieList">
+
+        </ul>
 
     </div>
-    <div id="movieInfo">
+    <div id = "posterImage">
         <img id = "movieImage">
+    </div>
+    <div id="movieInfo">
         <h3 id="title"></h3>
         <p id="vote_average"></p>
         <p id="release_date"></p>
@@ -33,5 +38,6 @@
         <p id="overview"></p>
         
     </div>
+</div>
 </body>
 </html>

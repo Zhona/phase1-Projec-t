@@ -46,10 +46,18 @@ image.src = image.src = `https://image.tmdb.org/t/p/w185/${movie.poster_path}`
 // add search bar 
 const titleCards = document.querySelector(".movieCards")
 
-// fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=cbb53a38daad4a38723daab094adb724')
-// .then ((res) => res.json())
-// .then((movie) =>  {
-//     console.log(movie.results, "fetched form database");
-//     for(let i = 0; i < movie.results.length; i++){
-//         renderMovies(movie.results[i]);
-//     }
+fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=cbb53a38daad4a38723daab094adb724')
+.then ((res) => res.json())
+.then((movie) =>  {
+    console.log(movie.results, "fetched form database");
+    for(let i = 0; i < movie.results.length; i++){
+        cardDetails(movie.results[i]);
+    }
+
+});
+function cardDetails() {
+    let movieTitleList = document.createElement("li")
+    movieTitleList.textContent = movie.title
+    titleCards.append(movieTitleList)
+}
+
